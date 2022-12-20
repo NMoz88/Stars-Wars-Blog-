@@ -1,6 +1,9 @@
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
+			name: [],
+			planets:[],
+			favorites: [],
 			demo: [
 				{
 					title: "FIRST",
@@ -15,6 +18,31 @@ const getState = ({ getStore, getActions, setStore }) => {
 			]
 		},
 		actions: {
+			addFav:(name,id)=>{
+				const store = getStore();
+				if(!store.favorites.filter((fav) => fav.id === id).length){
+					setStore({favorites:[...store.favorites,{name, id}]})
+					}
+			},
+			getCharacters: ()=>{
+				fetch ("https://www.swapi.tech/api/people")
+				.then (response=>response.json())
+				.then (data=>{
+					console.log(data.results)
+					setStore({name:data.results})
+				})
+			},
+			
+			getPlanets: ()=>{
+				fetch ("https://www.swapi.tech/api/planets")
+				.then (response=>response.json())
+				.then (data=>{
+					console.log(data.results)
+					setStore({planets:data.results})
+				})
+			},
+
+
 			// Use getActions to call a function within a fuction
 			exampleFunction: () => {
 				getActions().changeColor(0, "green");
@@ -37,6 +65,12 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 				//reset the global store
 				setStore({ demo: demo });
+			},
+			testGetStore: ()=>{
+				console.log(getStore());
+			},
+			testGetAction: ()=>{
+				console.log(getActions());
 			}
 		}
 	};
