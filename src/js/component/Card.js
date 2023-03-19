@@ -42,7 +42,7 @@ export const LongCard2 = (props)=>{
 </div>)
 }
 
-export const Card = ({title, path, description})=>{
+export const Card = ({title, path, description, id})=>{
   const {actions} = useContext(Context)
 
   return <div className="card" style={{width: "18rem"}}>

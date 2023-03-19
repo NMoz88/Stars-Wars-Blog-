@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+
 import { Context } from "../store/appContext";
 
 export const Navbar = () => {
-	
+	const { store, actions } = useContext(Context);
 	return (
 
 		<nav className="navbar navbar-expand-lg bg-light row">
@@ -34,8 +35,11 @@ export const Navbar = () => {
 				</div>
 			
 			</div>
-		
-	
+
+			
+
+
+				
 	
 		</nav>
 
