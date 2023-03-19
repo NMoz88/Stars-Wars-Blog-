@@ -1,6 +1,6 @@
 import React, {useContext, useEffect}from "react";
 import "../../styles/home.css";
-import { LongCard } from "../component/Card";
+import { LongCard, LongCard2 } from "../component/Card";
 import { Context } from "../store/appContext";
 
 export const Home = () => {
@@ -11,7 +11,7 @@ export const Home = () => {
 		<h1>Stars Wars Blog!</h1>
 		<div className="row">
 			<LongCard title="Go to the characters" path="/characters"/>
-			<LongCard title="Go to the planets" path="/planets"/>
+			<LongCard2 title="Go to the planets" path="/planets"/>
 		</div>
 	</div>
 );

@@ -24,6 +24,10 @@ const getState = ({ getStore, getActions, setStore }) => {
 					setStore({favorites:[...store.favorites,{name, id}]})
 					}
 			},
+			deleteFav:(index)=>{
+				const store = getStore();
+				setStore({favorites:[...store.favorites.filter((fav) => fav.id !== index)]});
+				},
 			getCharacters: ()=>{
 				fetch ("https://www.swapi.tech/api/people")
 				.then (response=>response.json())
