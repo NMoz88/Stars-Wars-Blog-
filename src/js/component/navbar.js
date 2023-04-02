@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 
+
 import { Context } from "../store/appContext";
 
 export const Navbar = () => {
@@ -22,15 +23,64 @@ export const Navbar = () => {
 			<div className="container-fluid col-auto">
 					
 				<div className="dropdown">
-					<a className="btn btn-primary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-						Favorites
-					</a>
+					
+			
+			
+						<a className="btn btn-primary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+							Favorites
+						</a>
+						<ul className="dropdown-menu">
+						
 
-					<ul className="dropdown-menu">
-						<li><a className="dropdown-item far fa-trash-alt" href="#">Action</a></li>
-						<li><a className="dropdown-item" href="#">Another action</a></li>
-						<li><a className="dropdown-item" href="#">Something else here</a></li>
+
+
+
+						
 					</ul>
+					
+
+
+					{/* <div className="btn-group dropstart">
+						<button
+						type="button"
+						className="btn btn-primary dropdown-toggle"
+						data-bs-toggle="dropdown"
+						aria-expanded="false"
+						>
+						Favorites
+						</button>
+						<ul className="dropdown-menu">
+						{console.log(store.favorites)}
+						{store.favorites.map((value, index) => {
+							return (
+							<li key={index} className="dropdown-item">
+								{value.name}
+								<FaTrashAlt
+								onClick={() => {
+									actions.deleteFav(value.id);
+								}}
+								/>
+							</li>
+							);
+						})}
+						</ul>
+					</div> */}
+
+					{/* <ul className="dropdown-menu">
+						
+
+
+
+
+						{store.favorites.map((value, index) => {
+                		return (
+							<li key={index} className="dopdown-item"> {value}  
+								<button onClick={() => { actions.deleteFav(value.name)}}>
+									<i class="fas fa-trash-alt"></i>
+								</button>
+							</li>
+						)})}
+					</ul> */}
 					
 				</div>
 			
