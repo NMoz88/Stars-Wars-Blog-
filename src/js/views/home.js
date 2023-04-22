@@ -9,7 +9,8 @@ export const Home = () => {
 	return (
 	<div className="text-center mt-5">
 		<h1>Stars Wars Blog!</h1>
-		<div className="row">
+		<div className="row justify-content-center">
+
 			<LongCard title="Go to the characters" path="/characters"/>
 			<LongCard2 title="Go to the planets" path="/planets"/>
 		</div>

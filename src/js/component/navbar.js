@@ -20,23 +20,65 @@ export const Navbar = () => {
 				</Link>
 			</div>
 			
-			<div className="container-fluid col-auto">
-					
-				<div className="dropdown">
-					
+			<div className="btn-group dropstart col-auto me-auto">
+				<button
+					type="button"
+					className="btn btn-primary dropdown-toggle"
+					data-bs-toggle="dropdown"
+					aria-expanded="false"
+					>
+						Favorites
+				</button>
+				<ul className="dropdown-menu">
+					{console.log(store.favorites)}
+					{store.favorites.map((value, index) => {
+						return (
+							<li key={index} className="dropdown-item">
+								{value.name}
+								<FaTrashAlt
+								onClick={() => {
+									actions.deleteFav(value.id);
+								}}
+								/>
+							</li>
+						);
+					})}
+				</ul>
+			</div>
 			
-			
-						<a className="btn btn-primary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+
+
+
+
+						{/* <a className="btn btn-primary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
 							Favorites
 						</a>
+						<ul class="dropdown-menu">
+							<li><a class="dropdown-item far fa-trash-alt" href="#">Action</a></li>
+							<li><a class="dropdown-item" href="#">Another action</a></li>
+							<li><a class="dropdown-item" href="#">Something else here</a></li>
+						</ul>
+						
 						<ul className="dropdown-menu">
-						
+						{console.log(store.favorites)}
+						{store.favorites.map((value, index) => {
+							return (
+							<li key={index} className="dropdown-item">
+								{value.name}
+								<FaTrashAlt
+								onClick={() => {
+									actions.deleteFav(value.id);
+								}}
+								/>
+							</li>
+							);
+						})}
 
 
 
 
 						
-					</ul>
+						</ul> */}
 					
 
 
@@ -82,22 +124,9 @@ export const Navbar = () => {
 						)})}
 					</ul> */}
 					
-				</div>
 			
-			</div>
-
-			
-
-
-				
 	
 		</nav>
 
-		
-		
-			
-
-			
-			
 	);
 };
