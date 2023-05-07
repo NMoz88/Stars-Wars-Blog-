@@ -9,7 +9,7 @@ export const LongCard = (props)=>{
           
           </div>
           <div className="card-body">
-            <h5 className="card-title">For this adventure to start, a character must be selected{props.title1}</h5>
+            <h5 className="card-title">For this adventure to start, a character must be selected{props.title}</h5>
             <div className="card-img">
               <img src="https://i.blogs.es/1da08b/1366_2000-9-/1366_2000.jpeg" style={{"width":"400px","height":"250px"}} />
             </div>
@@ -28,14 +28,14 @@ export const LongCard2 = (props)=>{
    
   </div>
   <div className="card-body" style={{width: "18"}}>
-    <h5 className="card-title">For this adventure to start, a planets must be selected</h5>
+    <h5 className="card-title">For this adventure to start, a planets must be selected{props.title}</h5>
 
     <div className="card-img">
         <img src="https://i0.wp.com/www.gamerfocus.co/wp-content/uploads/2019/11/planetas_fallen_order.jpg?w=1280&ssl=1" style={{"width":"400px","height":"250px"}} />
     </div>
    
     <Link to={props.path}>
-      <a href="#" className="btn btn-primary">{props.title}</a>
+      <a href="#" className="btn btn-primary my-3">{props.title}</a>
     </Link>
       
   </div>

@@ -10,7 +10,7 @@ export const Planets = ()=>{
         <h1>Planets</h1>
         <div className="row">
            {store.planets.map((elm, index)=>{
-            return <Card title={elm.name} id={elm.uid} route={"/detail/planet/" + elm.uid}/>
+            return <Card title={elm.name} id={elm.uid} path={"/detail/planet/" + elm.uid}/>
            })}
             
         </div>

@@ -10,9 +10,12 @@ export const Home = () => {
 	<div className="text-center mt-5">
 		<h1>Stars Wars Blog!</h1>
 		<div className="row justify-content-center">
-
+			<div className="col 5" style={{"height":"450px"}}>
 			<LongCard title="Go to the characters" path="/characters"/>
+			</div>
+			<div className="col 5" tyle={{"height":"450px"}}>
 			<LongCard2 title="Go to the planets" path="/planets"/>
+			</div>
 		</div>
 	</div>
 );
