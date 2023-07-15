@@ -9,7 +9,7 @@ export const Characters = ()=>{
         <h1>Characters</h1>
         <div className="row">
             {store.name.map((elm, index)=>{
-                return <Card title={elm.name} id={elm.uid} path={"/detail/characters/" + elm.uid}/>
+                return <Card title={elm.name} id={elm.uid} path={"/details/characters/" + elm.uid}/>
             })}
             
         </div>
