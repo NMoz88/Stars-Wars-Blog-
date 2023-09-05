@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
-
+import { FaTrashAlt} from "react-icons/fa"
 
 import { Context } from "../store/appContext";
 
@@ -30,6 +30,8 @@ export const Navbar = () => {
 						Favorites
 				</button>
 				<ul className="dropdown-menu">
+				<li className="dropdown-item">personaje 1 <FaTrashAlt/></li>
+				<li className="dropdown-item">personaje 2 <FaTrashAlt/></li>
 					{console.log(store.favorites)}
 					{store.favorites.map((value, index) => {
 						return (
