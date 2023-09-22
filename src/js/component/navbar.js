@@ -30,8 +30,7 @@ export const Navbar = () => {
 						Favorites
 				</button>
 				<ul className="dropdown-menu">
-				<li className="dropdown-item">personaje 1 <FaTrashAlt/></li>
-				<li className="dropdown-item">personaje 2 <FaTrashAlt/></li>
+				
 					{console.log(store.favorites)}
 					{store.favorites.map((value, index) => {
 						return (
